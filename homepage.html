@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discorsi di Nozze</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #faf0e6, #f5f5dc);
+            min-height: 100vh;
+            padding: 15px;
+            color: #5a5a5a;
+        }
+        .container { 
+            max-width: 500px; 
+            margin: 0 auto; 
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { 
+            text-align: center; 
+            color: #8b7d6b; 
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: 300;
+        }
+        .speech { 
+            background: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .speech:nth-child(2) { border-color: #dda0dd; }
+        .speech:nth-child(3) { border-color: #98d8c8; }
+        .speech:nth-child(4) { border-color: #f7dc6f; }
+        .speech:nth-child(5) { border-color: #ffb6c1; }
+        .speech:hover { 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.8);
+            flex-shrink: 0;
+        }
+        .speech-content {
+            flex: 1;
+        }
+        .speaker { 
+            font-weight: 600; 
+            color: #6b5b73;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .toggle {
+            color: #8b7d6b; 
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .content { 
+            display: none; 
+            line-height: 1.5;
+            font-size: 13px;
+            color: #666;
+        }
+        .content.show { display: block; }
+        .placeholder {
+            background: linear-gradient(45deg, #e8e8e8, #f0f0f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discorsi di Nozze</h1>
+        
+        <div class="speech" onclick="toggle(this)">
+            <img src="marco.jpg" alt="Marco" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='M'">
+            <div class="speech-content">
+                <div class="speaker">Marco - Testimone dello Sposo</div>
+                <div class="toggle">Tocca per leggere il discorso</div>
+                <div class="content">
+                    Cari amici e familiari, oggi celebriamo non solo l'unione di due persone meravigliose, ma anche l'inizio di una nuova avventura. Ho avuto il privilegio di essere testimone della crescita del loro amore e posso dire con certezza che sono fatti l'uno per l'altra.
+                </div>
+            </div>
+        </div>
+
+        <div class="speech" onclick="toggle(this)">
+            <img src="sofia.jpg" alt="Sofia" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='S'">
+            <div class="speech-content">
+                <div class="speaker">Sofia - Testimone della Sposa</div>
+                <div class="toggle">Tocca per leggere il discorso</div>
+                <div class="content">
+                    Quando penso a questa coppia, la prima parola che mi viene in mente è "equilibrio". Si completano in modo perfetto, ognuno porta il meglio dell'altro. Ho visto il loro amore crescere e maturare, diventando sempre più forte.
+                </div>
+            </div>
+        </div>
+
+        <div class="speech" onclick="toggle(this)">
+            <img src="luca.jpg" alt="Luca" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='L'">
+            <div class="speech-content">
+                <div class="speaker">Luca - Amico di famiglia</div>
+                <div class="toggle">Tocca per leggere il discorso</div>
+                <div class="content">
+                    Conosco questa famiglia da anni e posso dire che oggi è un giorno davvero speciale. Vedere due persone che si amano così profondamente unirsi in matrimonio è qualcosa di magico. Il loro amore è un esempio per tutti noi.
+                </div>
+            </div>
+        </div>
+
+        <div class="speech" onclick="toggle(this)">
+            <img src="elena.jpg" alt="Elena" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='E'">
+            <div class="speech-content">
+                <div class="speaker">Elena - Sorella della Sposa</div>
+                <div class="toggle">Tocca per leggere il discorso</div>
+                <div class="content">
+                    Mia cara sorella, oggi il mio cuore è colmo di gioia nel vederti così felice. Hai trovato la persona giusta, quella che ti fa sorridere ogni giorno e ti sostiene in ogni momento. Che possiate scrivere insieme le pagine più belle della vostra vita.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggle(element) {
+            const content = element.querySelector('.content');
+            const toggle = element.querySelector('.toggle');
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                toggle.textContent = 'Tocca per leggere il discorso';
+            } else {
+                content.classList.add('show');
+                toggle.textContent = 'Tocca per chiudere';
+            }
+        }
+    </script>
+</body>
+</html>
