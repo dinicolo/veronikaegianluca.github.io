@@ -133,7 +133,7 @@
 ""
 
                         ],
-                        "path_photo": "ele.jpg"
+                        "path_photo": "ele.jpeg"
                     },
                     "person2": {
                         "name": "Ginni's Speech - bride's sister", 
@@ -162,7 +162,7 @@
 "",
 "With love, Ginevra"
                         ],
-                        "path_photo": "ginni.jpg"
+                        "path_photo": "ginni.jpeg"
                     },
                     "person3": {
                         "name": "Fede's Speech - bride's super friend",
@@ -181,7 +181,7 @@
 "",
 "Congratulations to the newlyweds!"
                     ],
-                        "path_photo": "fede.jpg"
+                        "path_photo": "fede.jpeg"
                     },
                     "person4": {
                         "name": "Virgi's Speech - bride's best woman",
@@ -200,7 +200,7 @@
 "",
 "Today, you seal your love with a promise—still young, still bright. And I am certain it is a promise that will grow, that will strengthen, and that—even if it changes form—will accompany you wherever you go."
                     ], 
-                        "path_photo": "elena.jpg"
+                        "path_photo": "virgi.jpeg"
                     },
                     "person5": {
                         "name": "Erick's Speech - bride's dad",
@@ -253,7 +253,7 @@
 "Everyone: “Hurra, hurra, hurra, hurra!”",
 "Skål! Cheers!"
                     ], 
-                        "path_photo": "erick.jpg"
+                        "path_photo": "erick.jpeg"
                     },
                     "person6": {
                         "name": "Micol's Speech - groom's super friend",
@@ -281,7 +281,7 @@
 "that it be a bit philosophical and a bit childish,",
 "that it knows how to laugh at itself and shine, even without any need for lanterns."
                     ], 
-                        "path_photo": "micol.jpg"
+                        "path_photo": "micol.jpeg"
                     },
                     "person7": {
                         "name": "Arianna's Speech - groom's best woman",
@@ -303,21 +303,21 @@
 "And so my wish for you is that your marriage be this: the daily choice to walk together, without ever taking the other for granted. I wish you a life of small repeated acts, of attention, of patience, of possible falls and consequent restarts, a story of glances that renew themselves every day, eating lots of ice cream and cuddling for Veronika's naps.",
 "I wish you to continue to always choose each other, with the same wonder with which you recognized each other the first time and with the same joy that today you share with all of us. And I wish you to never forget the unique and special people you are, because it is precisely from this authenticity that the beauty of your bond is born."
                         ],
-                        "path_photo": "arianna.jpg"
+                        "path_photo": "arianna.jpeg"
                     },
                     "person9": {
                         "name": "Lorenzo's Speech - groom's amazing and charming brother",
                         "speach": [
 "TBD",
                         ],
-                        "path_photo": "lorenzo.jpg"
+                        "path_photo": "lorenzo.jpeg"
                     },
                     "person8": {
                         "name": "Giacomo's Speech - groom's brother",
                         "speach": [
 "TBD",
                         ],
-                        "path_photo": "giacomo.jpg"
+                        "path_photo": "giacomo.jpeg"
                     }
                 },
             };
@@ -336,7 +336,7 @@
                 const firstLetter = person.name.charAt(0);
                 
                 speechDiv.innerHTML = `
-                    <img src="${person.path_photo}" alt="${person.name}" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='${firstLetter}'">
+                    <img src="./${person.path_photo}" alt="${person.name}" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='${firstLetter}'">
                     <div class="speech-content">
                         <div class="speaker">${person.name}</div>
                         <div class="toggle">Tocca per leggere il discorso</div>
