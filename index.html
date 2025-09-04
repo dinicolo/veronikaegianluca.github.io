@@ -23,9 +23,16 @@
         }
         h1 { 
             text-align: center; 
-            color: #8b7d6b; 
+            color: #856843; 
             margin-bottom: 25px;
             font-size: 22px;
+            font-weight: 300;
+        }
+        h2 { 
+            text-align: center; 
+            color: #8b7d6b; 
+            margin-bottom: 25px;
+            font-size: 12px;
             font-weight: 300;
         }
         .speech { 
@@ -44,6 +51,11 @@
         .speech:nth-child(3) { border-color: #98d8c8; }
         .speech:nth-child(4) { border-color: #f7dc6f; }
         .speech:nth-child(5) { border-color: #ffb6c1; }
+        .speech:nth-child(6) { border-color: #993141; }
+        .speech:nth-child(7) { border-color: #667de0; }
+        .speech:nth-child(8) { border-color: #69e773; }
+        .speech:nth-child(9) { border-color: #000000; }
+        .speech:nth-child(10) { border-color: #ffffff; }
         .speech:hover { 
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -89,54 +101,246 @@
 </head>
 <body>
     <div class="container">
-        <h1>Discorsi di Nozze schifoso maledetto</h1>
-        
-        <div class="speech" onclick="toggle(this)">
-            <img src="marco.jpg" alt="Marco" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='M'">
-            <div class="speech-content">
-                <div class="speaker">Marco - Testimone dello Sposo</div>
-                <div class="toggle">Tocca per leggere il discorso</div>
-                <div class="content">
-                    Cari amici e familiari, oggi celebriamo non solo l'unione di due persone meravigliose, ma anche l'inizio di una nuova avventura. Ho avuto il privilegio di essere testimone della crescita del loro amore e posso dire con certezza che sono fatti l'uno per l'altra.
-                </div>
-            </div>
-        </div>
-
-        <div class="speech" onclick="toggle(this)">
-            <img src="sofia.jpg" alt="Sofia" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='S'">
-            <div class="speech-content">
-                <div class="speaker">Sofia - Testimone della Sposa</div>
-                <div class="toggle">Tocca per leggere il discorso</div>
-                <div class="content">
-                    Quando penso a questa coppia, la prima parola che mi viene in mente è "equilibrio". Si completano in modo perfetto, ognuno porta il meglio dell'altro. Ho visto il loro amore crescere e maturare, diventando sempre più forte.
-                </div>
-            </div>
-        </div>
-
-        <div class="speech" onclick="toggle(this)">
-            <img src="luca.jpg" alt="Luca" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='L'">
-            <div class="speech-content">
-                <div class="speaker">Luca - Amico di famiglia</div>
-                <div class="toggle">Tocca per leggere il discorso</div>
-                <div class="content">
-                    Conosco questa famiglia da anni e posso dire che oggi è un giorno davvero speciale. Vedere due persone che si amano così profondamente unirsi in matrimonio è qualcosa di magico. Il loro amore è un esempio per tutti noi.
-                </div>
-            </div>
-        </div>
-
-        <div class="speech" onclick="toggle(this)">
-            <img src="elena.jpg" alt="Elena" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='E'">
-            <div class="speech-content">
-                <div class="speaker">Elena - Sorella della Sposa</div>
-                <div class="toggle">Tocca per leggere il discorso</div>
-                <div class="content">
-                    Mia cara sorella, oggi il mio cuore è colmo di gioia nel vederti così felice. Hai trovato la persona giusta, quella che ti fa sorridere ogni giorno e ti sostiene in ogni momento. Che possiate scrivere insieme le pagine più belle della vostra vita.
-                </div>
-            </div>
+        <h1>Speeches</h1>
+        <h2>Remember to laugh and drink</h2>
+        <div id="speechContainer">
+            <!-- Speeches will be loaded here -->
         </div>
     </div>
 
     <script>
+        function loadSpeeches() {
+            const data = {
+                "speeches": {
+                    "person1": {
+                        "name": "Ele's Speech - bride's best woman",
+                        "speach": [
+"Hello everyone,",
+"",
+"I wasn't sure whether to go for a tear-jerker kind of speech or a hopefully funny one, but the truth is that in the end it's going to be a mix of both—because that's exactly how I feel right now, ahahah. And honestly, it also reflects my friendship with my sistah Vero (yo bro), and isn't that what every great story of friendship and love is like?",
+"",
+"I'd like to start with a little anecdote… It was a very rainy Roman evening back in January 2020 (we had no idea of all the things that were about to happen soon after—yes, I mean Covid… and Gianluca). Sounds like the opening of a novel, right? Anyway, Veronika was in Rome for a few days (at the time she was living in Milan) and, as always when she came to town, we had planned to go out for dinner together.",
+"",
+"So, there we were, sitting at Bandana pub—those who know it know it's a key place in many people's personal stories. And between updates, Vonka started telling me about this slightly annoying Milanese guy—who of course is Gianluca, HIIIII GIANLUUU—whom she had met at the office. He was giving her quite a lot of attention, which of course flattered her, but at the same time she clearly didn't want it. She was super confused about this guy because, come on, he was from Milan—and everyone knows Rome and Milan have always had their little rivalry—and besides, he could be annoying, and she didn't want a boyfriend at that moment, and then blah blah blah…",
+"",
+"So, I suggested that to get a better picture of the situation, we needed to see this guy's photos. Well, my friends, when we opened Gianluca's Instagram profile—oh my goodness. Let me tell you, this man was a stunner, like seriously rare level of hot. Sorry Gianlu, but facts are facts! I remember Vonka bursting into one of those uncontrollable, butterfly-filled laughs—you know, the kind that makes your stomach flutter (and honestly, I still get butterflies right now just thinking about it). And, well, we both agreed: this guy deserved a chance.",
+"",
+"Needless to say, within just a few weeks, they were together, head over heels in love, and already planning international futures. And I have to say, our dear Gianluca soon proved himself not only to be extremely handsome, but also sweet, caring, smart, genuine, funny, and welcoming— a man who would change his life for love, and who has always been the greatest supporter of his partner (now his wife!). Truly a wonderful person!",
+"",
+"And here I am today, with a heart full of joy, celebrating your union, feeling grateful and privileged to know you, to have you in my life, and to share in your lives. I can't wait to stand by your side for everything that lies ahead—for the good and the bad, for new milestones, new choices, new dinners, new homes, new trips, new “I want to be the full-time dad,” new “I want to found the first women-led biotech company best of both worlds,” new Nutella ice creams, new happenings in international neighborhoods—and for every single one of all the days to come. And I know Anna loves you too and is sending endless hearts from above. From the bottom of my heart, I wish you serenity and balance.",
+"",
+"So thank you, both of you, for this beautiful story, thank you for showing how powerful and simple love is. Thank you also for letting me play Chiara Ferragni tonight alongside my Amadeus. And I wish you infinite love. Long live the newlyweds!",
+""
+
+                        ],
+                        "path_photo": "marco.jpg"
+                    },
+                    "person2": {
+                        "name": "Ginni's Speech - bride's sister", 
+                        "speach": [
+"Dear Vero and Gianlu,",
+"",
+"Finally, this long-awaited and much-desired day has arrived for all of us.",
+"",
+"Gianlu, to you I can only say that you are an extraordinary person—a true gentleman of the kind that is so rare nowadays, with solid values and a kind, sensitive, caring heart. You love my sister like crazy, you make her happy every single day, you never stop surprising her, and you encourage her (something I also try to do!) to have more of a social life. And in fact, since she has been with you, she has only changed for the better! You have won all of our hearts. And know this: I've been rooting for you since day one—even back during Covid when, despite restrictions, you went to the Country and my sister was more than furious, I was down in Puglia defending you and trying to reason with her (though as you know, she can be stubborn!). So much so that when you finally drove all those kilometers to reach Puglia, she barely said hello to you, ahahaha! Truly, you are the best husband I could have wished for my sister, and the best brother-in-law I could ever ask for. The quality time we spend together—me, you, Veronika, Riccardo, and now also Sole—is sacred, and we can't wait to share even more… maybe one day with some little cousins too!",
+"",
+"Vero, my little sister, words will never be enough to describe the bond that ties us. To me, you will always be my baby sister—the little doll that Mom taught me to change diapers for, or to feed with a bottle, while I was still a child myself. My little blondie, the one I taught countless dances and choreographies to, the one I lent my Barbies to, the one I organized birthday parties for—but most of all, my little partner in our famous waltz with the dramatic dip (I know you're already laughing to yourself right now!).",
+"",
+"The first day I came to the hospital to see you, I was overwhelmed with emotion and burst into tears, thinking: from today, I have a sister forever. And once we came home, as in that photo that still melts our hearts, I would drag my little mattress next to your crib just to be close to you. But, my love, as I always tell you, you are not just a younger sister to protect—you are so much more. You are one of the people I admire most in the world, the most determined person I have ever known. You were the only one who, at 12 years old, already knew exactly what you wanted to do and who you wanted to become. And today, I can proudly say that thanks to your determination, intelligence, and strength, that little girl has truly achieved all her goals in every aspect of life. I am so proud of you, amore!",
+"",
+"But you are also my anchor, my source of strength and security in my fragile moments. At those times, you have been my big sister, my advisor, my best friend, my shoulder to cry on and laugh with. And not long ago, during the hardest moment of my life, you were—besides my husband—the person who stood closest to me. I truly don't know how I would have made it through without your support, your presence, your encouragement, and the strength and reassurance you gave me. For all this, I am and will forever be grateful. Our bond is unbreakable because of this: when you are fragile or uncertain, I am there to give you positivity and energy, and when I am weak, you give me strength and courage. That's why I always tell Mom and Erik that you are the greatest gift they could have ever given me. Even though, as a child, it wasn't always easy for me to accept all the changes and the jealousy, and despite a difficult childhood, today I can say it was worth it a thousand times over—because I could never imagine my life without you.",
+"",
+"And today, I can also say that you are an amazing Aunt—or “Cia,” as Sole calls you—so loving and sweet, that even though you live on the other side of the world, you never miss the important moments. You take 9-hour flights just to spend a few days with your niece and all of us. I will never forget when you arrived for Sole's birth—slightly awkward and nervous about holding her—but then trying to rock her to sleep with funny little songs and dancing around the house. And somehow, in your unique way, you actually managed!",
+"",
+"But beyond being a wonderful aunt, you have also been an extraordinary granddaughter, always present. And today I know for sure that our beloved grandparents are looking down from above, so happy that their second granddaughter is getting married. I know that Grandma would whisper to you: “Mish Mish, you are such a beautiful bride, and you and Gianliuk are a stunning couple.”",
+"",
+"My dearest Vero and Gianlu, I wish you a very long life together, full of love, great emotions, happiness, laughter, travels, compromises, and balance—even when times get hard. I wish you endless conversations to face anything together, and the joy of creating a wonderful family with many children—or better yet, daughters, just as Vero dreams of!",
+"",
+"I adore you both, and I will always be here for you.",
+"",
+"Long live the newlyweds!!!",
+"",
+"With love, Ginevra"
+                        ],
+                        "path_photo": "sofia.jpg"
+                    },
+                    "person3": {
+                        "name": "Fede's Speech - bride's super friend",
+                        "speach": [
+"It feels almost impossible to believe that I'm here today, giving this speech at your wedding – the wedding of my very first true friend.Although, if I think about it, it was obvious that you would be the first. You've always been the one with a clear vision: you knew you wanted to leave at 18, then come back, and then leave again. You've always been determined about what you wanted to do and where you wanted to live.And in the end, you chose New York, the city that never sleeps – even though, let's be honest, you sleep a lot! You should know that I've seen Veronika sleep anywhere, at any time of day!",
+"",
+"You never really cared much about appearances – and let's admit it, showers were never the most frequent part of our (shared) days. But that's exactly what makes you special: your most authentic and simple side, together with your strong and courageous one, that always shines through whenever it's about following what you believe in with absolute conviction.",
+"",
+"It would be impossible to sum up in three minutes all the experiences and trips we shared, all the flights we took just to see each other whenever we could. But there's one day that will always stay in my heart: our day in Cannes with Grandma Lea. That day, after a series of little mishaps (and wardrobe malfunctions), we decided to go to the Casino to wrap it all up in style. Needless to say, we had run out of money, while she – much luckier and wiser than us – gave us a chip saying, “Here, this one is lucky.” And indeed, it was.That day, for me, represents who you are, our friendship, our bond: finding joy even in the quietest moments, getting excited even about the simplest things, and feeling at home whether we were on vacation with your wonderful family (whom I'll always thank for welcoming me), on a beach in Formentera, in Miami, in New York, or just on the couch at home.",
+"",
+"My wish for you, my friend, is that you always keep that spark of enthusiasm alive, that you never stop singing at the top of your lungs whenever a song you love comes on the radio, and that you keep loving without hesitation and without fear.",
+"",
+"Gianlu, to you I can only say thank you. Thank you for welcoming Vero into your life and for always treating her as the most important person. Thank you for pushing her, so many times, to be the best version of herself. And thank you for never leaving her alone when distance kept us from being physically close. I couldn't have asked for anyone better than you by her side.",
+"",
+"To conclude, my wish for you both is that you always manage to find the right balance: between big dreams and small daily routines, between cooking together and arguing over who has to wash the dishes, between traveling the world and enjoying the couch at home.I wish you a journey full of shared steps: some light, some a bit harder, but always side by side, always in the same rhythm, and most importantly, always in the same direction.",
+"",
+"Congratulations to the newlyweds!"
+                    ],
+                        "path_photo": "luca.jpg"
+                    },
+                    "person4": {
+                        "name": "Virgi's Speech - bride's best woman",
+                        "speach": [
+"Writing this speech hasn't been easy. Not because there isn't anything to say about Gianluca and Veronika, but maybe because, as a young Celentano once sang, I don't know how to speak of love. Or maybe because I was afraid of going completely off-topic.",
+"",
+"I was afraid of talking too much about Veronika—about how she has always been a part of my life. About the deep bond that unites us, and about the fact that I was with her on her birthday, at her First Communion, her middle school exam, her high school graduation, her university graduation… and today, I am so happy to be here as her maid of honor, on her wedding day.",
+"",
+"But let's also talk a little about Gianluca. I wish I could say that Gianluca is exactly the kind of person I had always imagined next to Veronika… but in truth, I never imagined anyone in particular. No one who could truly be worthy of my friend. And then—you're from Milan, and we all know how much Veronika adores Milan.",
+"",
+"Looking at you both, I see two people who met, fell in love, but ultimately chose each other. You let your love guide you into making difficult choices that somehow felt effortless. You believed in it, and you leapt into the unknown. Gianluca, you decided to follow Veronika across the world, and you discovered that it was also the right choice for you. Because when love is as pure and gentle as yours, it makes you better, stronger, freer. You believed in one another, and you pushed each other to bring out the very best of yourselves. The love I see between you is something you can feel immediately—in the way you look at each other, in the energy you radiate when you're close together. Putting it into words is not easy.",
+"",
+"I grew up in Veronika's home. I called her grandparents grandma and grandpa, her parents aunt and uncle, her sister cousin. I always felt a warmth radiating in the Stattin/Pellagrosi/De Bellis household. And you don't know how happy it makes me to see that same fire in both of you: the same care, the same tenderness, the same loving looks.",
+"",
+"In you, I see a family. A home—I don't know exactly where in the world it will be, but I know for certain it will be filled with countless objects and memories. A home where Christmas and Easter are celebrated—and why not, even Thanksgiving. But most importantly, a home where eating Nutella straight from the jar with a spoon will always be allowed.",
+"",
+"Today, you seal your love with a promise—still young, still bright. And I am certain it is a promise that will grow, that will strengthen, and that—even if it changes form—will accompany you wherever you go."
+                    ], 
+                        "path_photo": "elena.jpg"
+                    },
+                    "person5": {
+                        "name": "Erick's Speech - bride's dad",
+                        "speach": [
+
+"Dear Veronika and Gianluca, Paola and Emanuela, and all our guests, near and far.",
+"",
+"It is with great joy that I speak today as the father of the bride.",
+"Much has already been said—beautiful, funny, heartfelt words about Veronika and Gianluca—but before we get to the cake, you'll have to hear mine as well.",
+"",
+"We are here to celebrate the marriage of Veronika and Gianluca, the culmination of a relationship Paola and I watched begin to take shape when the four of us—Paola, myself, Veronika, and Gianluca—were all stuck together during Covid, in Via Boccaccio in Milan, in the fall of 2020.",
+"During those days, I had the chance to watch two young people turn a difficult, suffocating lockdown into something positive—their very first time living side by side. Those days were made up of the ordinary: cooking—Gianluca with his curry chicken, Veronika with her risotto—laughing, working in remote, tidying up. But above all, there was a sense of closeness and complicity that already hinted at something much greater.",
+"",
+"Now, in the time strictly allotted to me by our excellent toastmaster Eleonora, I'd like to share my thesis. Here it is: Veronika and Gianluca are like quantum physics in its best conditions—where 1 + 1 doesn't make 2, but 3. Through constructive interference, they become something greater than the sum of their parts.",
+"And of course, this isn't guaranteed. In quantum physics—and often in relationships—1 + 1 can just as easily end up being less than 2, when interference turns destructive.",
+"And since every theory needs proof, let me give you a few examples of constructive interference:",
+"",
+"Veronika, not exactly a night owl, and Gianluca, not precisely a homebody, together have become the couple who throw open their home in Dumbo every weekend to cook dinner for friends. And Veronika: don't worry, your grandchildren will love your cooking, too!",
+"Veronika, not a natural-born athlete, and Gianluca, not exactly born a globetrotter—yet in 2023, the two of them managed to ski more days and in more countries than most World Cup racers.",
+"Veronika, famously messy, and Gianluca, the kind of man who hangs his shirts by color… well, no, constructive interference hasn't kicked in here yet. But Gianluca, don't give up—miracles happen!",
+"Speaking a bit more seriously: why do these positive quantum effects happen? Certainly because:",
+"",
+"Paola gave Veronika an idealistic spirit and a deep sensitivity to others.",
+"Emanuela raised Gianluca to be responsible, grounded, and loyal.",
+"My conclusion is this: Veronika and Gianluca may be different on the surface—and that's what allows them to enrich each other—but they are deeply similar at heart, and that's what keeps them anchored in the same values.",
+"Let me show you:",
+"",
+"Gianluca is outgoing, the man of a thousand friendships. Veronika is more selective, more reserved in her affections. But both are deeply connected to their families, no matter the distance—to Ginevra and Lorenzo—and both adore their niece Sole, along with the dogs Ginger, Paolo, and Lola.",
+"Gianluca is always on the move. Veronika is more relaxed—unless she has a clear goal. But both are generous: you saw that their wedding registry was made up entirely of charities. And Gianluca once gave me six bottles of excellent wine just for lending him my car—isn't that right, Gianluca?",
+"So: different on the surface, similar at heart. And that, more than anything, is what makes their bond so strong.",
+"",
+"Before I close, I'd like to bring the greetings of Veronika and Gianluca's grandparents, our dear absent guests. Each of them, in their own way, is thinking of you: some from Sweden, some from Milan, and some watching over from above. I know they would all be overjoyed to see your union today, and we feel them close in our memories, as well as in the smiles we carry for them.",
+"",
+"And now, I'll need a little help from our Swedish guests:",
+"(We Swedes will sing the song Det var i vår ungdoms fagraste vår)",
+"",
+"Det var i vår ungdoms fagraste vår,",
+"vi drack varandra till och vi sade gutår!",
+"Och alla så dricka vi nu Brudparet till,",
+"[The couple:] Och Brudparet säger inte nej därtill.",
+"För det var i vår ungdoms fagraste vår,",
+"vi drack varandra till och vi sade gutår!",
+"",
+"That 1 + 1 really does make 3—today we are all witnesses: the extraordinary power of your love, which has brought us all together here.",
+"",
+"[raising the glass:] To Veronika and Gianluca—for the strength with which you chose each other, for the joy you spread, and for the future you'll build together.",
+"",
+"",
+"Long live the newlyweds — Ett fyrfaldigt leve för brudparet — Hipp, hipp …",
+"Everyone: “Hurra, hurra, hurra, hurra!”",
+"Skål! Cheers!"
+                    ], 
+                        "path_photo": "elena.jpg"
+                    },
+                    "person6": {
+                        "name": "Micol's Speech - groom's super friend",
+                        "speach": [
+"What is happiness?",
+"I honestly don't know.",
+"Who knows? Would you be certain you could give a definition valid for everyone?",
+"In my opinion, if we asked ten people what it is, we would probably have ten different answers.",
+"for a Greek philosopher it was eudaimonia,",
+"for a Latin poet it was beatitudo,",
+"for a child it could simply be a chocolate ice cream.",
+"Among the various stories and anecdotes related to happiness I found this one that made me think of dedicating it to you.",
+"It's the anecdote of Diogenes' lantern who, for those who don't remember, was a philosopher of the Cynic school of the 4th century BC. He was provocative and ironic: he lived in a barrel, mocked luxury and sought to unmask the hypocrisies of society.",
+"The story tells of Diogenes, who in broad daylight, walked through the streets of Athens with a lit lantern.",
+"When the citizens, amazed, asked him:",
+"Why are you walking around with a lantern in sunlight?",
+"he would answer:",
+"I'm looking for Man",
+"The meaning was ironic and bitter: he meant that, despite being surrounded by people, he found no one who lived according to authentic virtue. In other words, he found no man who was truly happy and sincere.",
+"Because happiness, in the end, is never a dictionary definition:",
+"it's made of sudden laughter, or hands that seek each other without thinking, or two people who feel at home in each other.",
+"It can be light like a sunny day or tenacious like a kept promise.",
+"And so my wish for you is simple:",
+"that your happiness may always surprise you,",
+"that it be a bit philosophical and a bit childish,",
+"that it knows how to laugh at itself and shine, even without any need for lanterns."
+                    ], 
+                        "path_photo": "elena.jpg"
+                    },
+                    "person7": {
+                        "name": "Arianna's Speech - groom's best woman",
+                        "speach": [
+"Dear Veronika, dear Gianluca,",
+"today is one of the most important days of your life, but it is also for me. Yes, because my best friend, my brother, the only friend with whom I am sure I will share my entire life, has married a woman who is nothing short of perfect for him, and I couldn't be happier than this.",
+"",
+"The first memory I have of him goes back to third or fourth grade. Coming home from school, my mom and I ran into him and mama Emanuela who, upset, told us about how someone had broken the window of their car to steal Gianluca's judo bag. I remember that I thought about that event all afternoon, empathizing excessively with that child who was then unknown to me.",
+"The sadness I had felt then became clearer to me a few years later, when I met Gianluca again in September 2009, on the first day of high school. At first we were simply two good friends, but one day everything changed. We walked and talked for hours, not just telling each other anecdotes from our lives, but entering into the depths of our souls. From then on we decided that we would be each other's confidant. We opened ourselves to a new form of family and began to share the same language: made of words, gestures, glances, musical notes that only we knew how to interpret.",
+"",
+"My dear Gianlu, your family, your grandparents, your brother welcomed me as if I had always been there. I never felt out of place, and your mom, who showed exceptional strength and love in raising you and your brother, is for me a point of reference and a great example of strength and independence.",
+"They say that family, once you reach a certain level of personal awareness, is chosen. And I, by you, felt chosen from the first day, choosing you in return.",
+"People, between friends and boyfriends, have passed through our lives, but we always remembered that the only thing that would last forever was our friendship.",
+"",
+"Then, in February 2020, something changed. I sensed it right away, from the care with which you wanted to choose the place for your first date and from the games, almost childish, of touching each other gently in secret on that trip to La Thuile. Veronika entered your story and nourished your life like a river that flows into the sea: impetuous, but clear and sweet at the same time.",
+"With a close and intense relationship like the one that binds me and Gianluca something could have changed, but instead nothing happened. Not even when the two newlyweds moved thousands of miles away. And this happened because, certainly, Gianluca is an excellent person at carefully cultivating the relationships that are dear to him, but also and above all because by his side he has an equally special girl.",
+"Today, in front of more than 150 witnesses, I want to thank Veronika for having understood and respected the strong bond that unites me and the groom. Thank you for having been, and for being, so intelligent, sensitive and kind.",
+"",
+"And so my wish for you is that your marriage be this: the daily choice to walk together, without ever taking the other for granted. I wish you a life of small repeated acts, of attention, of patience, of possible falls and consequent restarts, a story of glances that renew themselves every day, eating lots of ice cream and cuddling for Veronika's naps.",
+"I wish you to continue to always choose each other, with the same wonder with which you recognized each other the first time and with the same joy that today you share with all of us. And I wish you to never forget the unique and special people you are, because it is precisely from this authenticity that the beauty of your bond is born."
+                        ],
+                        "path_photo": "elena.jpg"
+                    },
+                    "person8": {
+                        "name": "Lorenzo's Speech - groom's brother",
+                        "speach": [
+"TBD",
+                        ],
+                        "path_photo": "lorenzo.jpg"
+                    }
+                },
+            };
+            
+            const container = document.getElementById('speechContainer');
+            
+            for (const [key, person] of Object.entries(data.speeches)) {
+                const speechText = Array.isArray(person.speach) 
+                    ? person.speach.join('<br>') 
+                    : person.speach;
+                
+                const speechDiv = document.createElement('div');
+                speechDiv.className = 'speech';
+                speechDiv.onclick = () => toggle(speechDiv);
+                
+                const firstLetter = person.name.charAt(0);
+                
+                speechDiv.innerHTML = `
+                    <img src="${person.path_photo}" alt="${person.name}" class="photo" onerror="this.className='photo placeholder'; this.innerHTML='${firstLetter}'">
+                    <div class="speech-content">
+                        <div class="speaker">${person.name}</div>
+                        <div class="toggle">Tocca per leggere il discorso</div>
+                        <div class="content">${speechText}</div>
+                    </div>
+                `;
+                
+                container.appendChild(speechDiv);
+            }
+        }
+        
         function toggle(element) {
             const content = element.querySelector('.content');
             const toggle = element.querySelector('.toggle');
@@ -149,6 +353,8 @@
                 toggle.textContent = 'Tocca per chiudere';
             }
         }
+        
+        document.addEventListener('DOMContentLoaded', loadSpeeches);
     </script>
 </body>
 </html>
