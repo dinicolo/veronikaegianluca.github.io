@@ -112,7 +112,7 @@
         function loadSpeeches() {
             const data = {
                 "speeches": {
-                    "person1": {
+                    "person01_eleonora": {
                         "name": "Ele's Speech - bride's best woman",
                         "speach": [
 "Hello everyone,",
@@ -135,7 +135,7 @@
                         ],
                         "path_photo": "ele.jpeg"
                     },
-                    "person2": {
+                    "person08_ginni": {
                         "name": "Ginni's Speech - bride's sister", 
                         "speach": [
 "Dear Vero and Gianlu,",
@@ -164,7 +164,7 @@
                         ],
                         "path_photo": "ginni.jpeg"
                     },
-                    "person3": {
+                    "person04_federica": {
                         "name": "Fede's Speech - bride's super friend",
                         "speach": [
 "It feels almost impossible to believe that I'm here today, giving this speech at your wedding – the wedding of my very first true friend.Although, if I think about it, it was obvious that you would be the first. You've always been the one with a clear vision: you knew you wanted to leave at 18, then come back, and then leave again. You've always been determined about what you wanted to do and where you wanted to live.And in the end, you chose New York, the city that never sleeps – even though, let's be honest, you sleep a lot! You should know that I've seen Veronika sleep anywhere, at any time of day!",
@@ -183,7 +183,7 @@
                     ],
                         "path_photo": "fede.jpeg"
                     },
-                    "person4": {
+                    "person05_virginia": {
                         "name": "Virgi's Speech - bride's best woman",
                         "speach": [
 "Writing this speech hasn't been easy. Not because there isn't anything to say about Gianluca and Veronika, but maybe because, as a young Celentano once sang, I don't know how to speak of love. Or maybe because I was afraid of going completely off-topic.",
@@ -202,8 +202,8 @@
                     ], 
                         "path_photo": "virgi.jpeg"
                     },
-                    "person5": {
-                        "name": "Erick's Speech - bride's dad",
+                    "person09_erik": {
+                        "name": "Erik's Speech - bride's dad",
                         "speach": [
 
 "Dear Veronika and Gianluca, Paola and Emanuela, and all our guests, near and far.",
@@ -255,7 +255,7 @@
                     ], 
                         "path_photo": "erick.jpeg"
                     },
-                    "person6": {
+                    "person02_micol": {
                         "name": "Micol's Speech - groom's super friend",
                         "speach": [
 "What is happiness?",
@@ -283,7 +283,7 @@
                     ], 
                         "path_photo": "micol.jpeg"
                     },
-                    "person7": {
+                    "person06_arianna": {
                         "name": "Arianna's Speech - groom's best woman",
                         "speach": [
 "Dear Veronika, dear Gianluca,",
@@ -305,21 +305,49 @@
                         ],
                         "path_photo": "arianna.jpeg"
                     },
-                    "person9": {
+                    "person07_lorenzo": {
                         "name": "Lorenzo's Speech - groom's amazing and charming brother",
                         "speach": [
-"TBD",
+"Hi everyone and I am gianlu's brother and for those who know me you can confirm that I am the funnier, more beautiful and much more muscular version of gianluca.",
+"It's difficult to write this speech, I don't want to make people cry again and then... I want to go back to eating, so I'll be brief.",
+"",
+"I wanted to tell you how they ruined my first love, a beautiful relationship that I will always carry with me as a happy page of my life.",
+"But then... they arrived... gianlu talks to me on the phone about a girl who works in another team... then they start with their smiles and their looks... they made me notice what love is, how to love, how to be good together.",
+"",
+"It's something I don't see in many couples and I'm very happy that my brother found it in a splendid woman like veronika.",
+"",
+"They are beautiful, boring and veronika very unpleasant, especially when she plays risk...",
+"",
+"I love you both so much, gianlu you managed to teach me how to love too.",
+"",
+"To gianluca's big heart and to north america in the risk game!",
                         ],
                         "path_photo": "lorenzo.jpeg"
                     },
-                    "person8": {
+                    "person03_giacomo": {
                         "name": "Giacomo's Speech - groom's brother",
                         "speach": [
-"TBD",
+"Good morning everyone,",
+"",
+"I'm just jumping in to say a few words to you.",
+"",
+"I don't want to bore you by telling you about how Gilu and I met or how not two days go by without us talking, even though he's on the other side of the world.",
+"",
+"Today I want to focus on something else: the moment when Gilu met Veronika.",
+"",
+"I remember well that, besides obviously telling me about a beautiful girl, he had been struck by her character and her remarkable intelligence. The conviction, mixed with curiosity with which he spoke to me about her, made me understand that he wouldn't let her get away. And in fact... she didn't manage to escape even by moving to America!",
+"",
+"Just think that the name 'Veronika' comes out of Gilu's mouth at least twice in every conversation we have. And this is wonderful: it means that she is always present at the center of his thoughts.",
+"",
+"In you, Gilu, Vero, I see everything I adore about the word love: respect, values, mutual growth, sharing and care.",
+"",
+"For this reason I am proud to be here today as a witness, promising to always be there for both of you.",
+"",
+"With affection,"
                         ],
                         "path_photo": "giacomo.jpeg"
                     },
-                    "person9": {
+                    "person10_gianluca": {
                         "name": "Gianluca's Speech - groom",
                         "speach": [
 "Ciao,",
@@ -376,7 +404,10 @@
             
             const container = document.getElementById('speechContainer');
             
-            for (const [key, person] of Object.entries(data.speeches)) {
+            // Sort speeches alphabetically by key to maintain order
+            const sortedSpeeches = Object.entries(data.speeches).sort(([a], [b]) => a.localeCompare(b));
+            
+            for (const [key, person] of sortedSpeeches) {
                 const speechText = Array.isArray(person.speach) 
                     ? person.speach.join('<br>') 
                     : person.speach;
